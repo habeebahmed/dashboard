@@ -1,26 +1,20 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Login from '@/components/Login'
-import Sign from '@/components/Sign'
+import Login from '@/components/views/Login'
+import Sign from '@/components/views/Sign'
 import Dashboard from '@/components/DashboardLayout/dashboard'
-Vue.use(Router)
 
-export default new Router({
-  routes: [
+
+
+const routes = [
     {
       path: '/',
       name: 'Login',
       component: Login
     },
     {
-      path: '/signup',
-      name: 'Sign',
-      component: Sign
-    },
-    {
       path: '/dashboard',
       name: 'Dashboard',
-      component: Dashboard
+      component: Dashboard,
+      meta: { requiresAuth: true }
     },
     {
       path: '*',
@@ -28,4 +22,5 @@ export default new Router({
 
     }
   ]
-})
+
+export default routes
