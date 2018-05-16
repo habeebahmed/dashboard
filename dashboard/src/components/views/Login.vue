@@ -78,7 +78,7 @@
 <script>
 import axios from 'axios'
 import general from './generalcomp/general.js'
-import swal from 'sweetalert';
+import swal from 'sweetalert'
 $(function() {
 
     $('#login-form-link').click(function(e) {
@@ -113,10 +113,10 @@ export default {
     login () {
 
       // const vue = this
-      // const url = "https://backend.botlive.io/api/member/email/a@a.com"
+      // const url = "https://backend.botlive.io/api/member"
       // const access_token = vue.getCookie('token')
       // console.log(access_token);
-      // axios.get(url,{},{
+      // axios.get(url,{
       //   headers: {
       //       'Content-Type': 'application/json',
       //       'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YWU0ODM1OGRmMzliMzEwMDY0NGRkZDIiLCJpYXQiOjE1MjYzODE0Nzh9.i3pzCYNWOgo1IeXKGmkGGSGvYSely4N_pe-POrk4vjo'
@@ -126,14 +126,15 @@ export default {
       //   const status = response.status
       //   if (!status) {
       //     console.log("not verified");
-      //   } else {
+      //   } else{
+      //     console.log(response);
       //     console.log("verified");
       //     alert("verified")
       //     // next()
       //   }
       // })
       // .catch(function (error) {
-      //   console.log(error)
+      //   console.log(error.response.data)
       // })
       const vue = this
       const url = "https://backend.botlive.io/api/auth/login"
